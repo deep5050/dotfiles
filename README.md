@@ -1,9 +1,10 @@
 # dotfiles
-My custom configuration files for Linux, made opensource
+My custom configuration files for Linux
+
 simple but productive
 
 
-Required tools to use these confs.
+# Required tools to use these confs.
 
 1. bat
 2. fzf
@@ -14,8 +15,10 @@ Required tools to use these confs.
 7. [has](https://raw.githubusercontent.com/kdabir/has/master/has)
 8. fuck
 9. tldr
-10. [portal](https://github.com/SpatiumPortae/portal)
-11. [share-cli](https://github.com/marionebl/share-cli)
+
+# Other useful tools
+11. [portal](https://github.com/SpatiumPortae/portal)
+12. [share-cli](https://github.com/marionebl/share-cli)
 
 # Bash
 
