@@ -4,7 +4,7 @@ My custom configuration files for Linux
 simple but productive
 
 
-# Required tools to use these confs.
+# Required tools to use these confs. (see the install.sh file)
 
 1. bat
 2. fzf
