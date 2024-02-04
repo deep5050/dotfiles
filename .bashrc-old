@@ -47,21 +47,18 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    # --------------------- below one 
-    #PS1='\W $(__git_ps1 "(\[\e[35m\]%s\[\e[m\])") $ '
-    PS1='\W\[\e[32m\] \$ \[\e[m\]'
-    #PS1='\W \$ '
+    PS1='\W $(__git_ps1 "(\[\e[35m\]%s\[\e[m\])") > '
     #PS1='\[\e[36m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]:\[\e[33;1m\]\w\[\e[m\]$(__git_ps1 " (\[\e[35m\]%s\[\e[m\])")\$ '
     #PS1='\[\e[32m\]\u\[\e[0m\]@\[\e[97m\]\W > '
     #PS1='\[\e[32m\]\u\[\e[0m\]@\[\e[33m\]\W\[\e[0m\] > '
@@ -158,8 +155,34 @@ compress() {
   tar -czvf "$1.tar.gz" "$1"
 }
 
+# Function to create a backup of a file
+backup() {
+  cp "$1" "$1.bak"
+}
 
+# Function to quickly create a new Python virtual environment
+mkvenv() {
+  python3 -m venv "$1"
+  source "$1/bin/activate"
+}
 
+# Function to convert Markdown to HTML using Pandoc
+md2html() {
+  pandoc -s "$1" -o "${1%.md}.html"
+}
+
+# Function to search for and install a package in apt
+aptinstall() {
+  sudo apt search "$1" && sudo apt install "$1"
+}
+
+# Function to display the public IP address
+publicip() {
+  curl -s ifconfig.me
+}
+
+eval "$(zoxide init bash)"
+eval "$(thefuck --alias)"
 
 # Git aliases
 alias gs='git status'
@@ -167,27 +190,30 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gp='git pull'
 alias gpush='git push'
+alias glog='git log --oneline --graph --all --decorate'
 
-eval "$(zoxide init bash)"
-eval "$(thefuck --alias)"
+# Utility aliases
 alias cd=z
 alias ls=lsd
-alias ll="lsd -la"
+alias ll="lsd -l"
 alias show=batcat
 alias zz="z -"
 alias .=pwd
 alias ".."="z .."
 alias "..."="z ./../../../"
 alias vi=nvim
+alias tree="lsd --tree"
+alias duh='du -h --max-depth=1 | sort -hr'
+alias weather='curl -s wttr.in'
+alias calendar='cal'
+
+# System related
+alias update='sudo apt update && sudo apt upgrade'
+alias install='sudo apt install'
+
+
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
-alias tree="lsd --tree"
-
-
-# Function to create a backup of a file
-backup() {
-  cp "$1" "$1.bak"
-}
 
 
 # Enable history with timestamp
@@ -198,70 +224,4 @@ HISTSIZE=1000
 alias history='history | tail -n 20'
 
 
-alias update='sudo apt update && sudo apt upgrade'
-alias install='sudo apt install'
-
-# Git log with a nice format
-alias glog='git log --oneline --graph --all --decorate'
-
-# Show disk usage in a human-readable format
-alias duh='du -h --max-depth=1 | sort -hr'
-
-
-# Function to quickly create a new Python virtual environment
-mkvenv() {
-  python3 -m venv "$1"
-  source "$1/bin/activate"
-}
-
-
-# Function to convert Markdown to HTML using Pandoc
-md2html() {
-  pandoc -s "$1" -o "${1%.md}.html"
-}
-
-# Display a random programming joke
-alias joke='curl -s https://v2.jokeapi.dev/joke/Programming?format=txt'
-
-# Display the weather using wttr.in
-alias weather='curl -s wttr.in'
-
-# Display a calendar
-alias calendar='cal'
-
-# Function to search for and install a package in apt
-#searchinstall() {
-#  sudo apt search "$1" && sudo apt install "$1"
-#}
-
-
-# Function to display the public IP address
-publicip() {
-  curl -s ifconfig.me
-}
-
-
-organize_type() {
-    bash ~/scripts/util_organize_files_by_types.sh $1
-}
-
-
-organize_name() {
-    bash ~/scripts/util_organize_files_by_names.sh $1
-}
-
-organize_size() {
-    bash ~/scripts/util_organize_files_by_sizes.sh $1
-}
-
-
-organize_revert() {
-    bash ~/scripts/util_organize_files_revert.sh $1
-}
-
-gist() {
-  bash ~/scripts/upload_gist.sh $1 $2
-
-}
 echo "Hi, $(whoami)! welcome :)";
-
