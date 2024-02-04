@@ -1,5 +1,6 @@
 # dotfiles
 My custom configuration files for Linux
+> TIP: use GNU stow to manage your configs
 
 simple but productive
 
