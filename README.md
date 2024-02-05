@@ -1,19 +1,49 @@
-![logo](dotfiles.png)
+
+<p align=center>
+  <img src=dotfiles.png height=300px width=500px align=center>
+</p>
 
 # dotfiles
-My custom configuration files for Linux .simple but productive
+My custom configuration files for Linux. 
 
-You need GNU stow to apply these configs
+Each branch has different styles for bash/fish/zsh configs
+
+## main branch 
+
+### bash
+
+
+### fish
+
+
+## 2.0
+
+### bash
+
+![image](https://github.com/deep5050/dotfiles/assets/27947066/978a57b5-1bf4-4616-8c5c-7ba8ea745830)
+
+### fish
+![image](https://github.com/deep5050/dotfiles/assets/27947066/49252d27-0035-4cf4-99e0-0c4953883b1f)
+
+
+
+**simple but productive**
+
+> You need GNU `stow` to apply these configs
+
 
 # How to use?
 
-clone this into your home directory. `cd dotfiles` then for example get the `fish` config only run `stow --adopt -v fish`
+1. Clone this into your home directory. `cd dotfiles`
+2. Then for example get the `fish` config only: run `stow --adopt -v fish`
 
 To get all the config you can also run `make`
 
 
 
-# Required tools to use these confs. (see the install.sh file)
+# Required tools 
+
+To use these confs. (see the install.sh file)
 
 1. bat
 2. fzf
