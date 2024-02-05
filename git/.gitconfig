@@ -1,0 +1,19 @@
+[user]
+	name = Dipankar Pal
+	email = dipankarpal5050@gmail.com
+
+[alias]
+        graph = log --graph --oneline --all --simplify-by-decoration
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+	conflictStyle = diff3
+[mergetool]
+	prompt = false
+[pull]
+	rebase = false
+[branch]
+        sort = -authordate

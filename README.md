@@ -1,7 +1,16 @@
-# dotfiles
-My custom configuration files for Linux
+![logo](dotfiles.png)
 
-simple but productive
+# dotfiles
+My custom configuration files for Linux .simple but productive
+
+You need GNU stow to apply these configs
+
+# How to use?
+
+clone this into your home directory. `cd dotfiles` then for example get the `fish` config only run `stow --adopt -v fish`
+
+To get all the config you can also run `make`
+
 
 
 # Required tools to use these confs. (see the install.sh file)
@@ -12,7 +21,6 @@ simple but productive
 4. zoxide
 5. lsd
 6. glow
-7. [has](https://raw.githubusercontent.com/kdabir/has/master/has)
 8. fuck
 9. tldr
 
