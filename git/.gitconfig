@@ -1,0 +1,55 @@
+[user]
+	name = Dipankar Pal
+	email = dipankarpal5050@gmail.com
+
+[core]
+    editor = nvim
+    autocrlf = input
+    pager = less -F -X
+
+
+[diff]
+    tool = vimdiff
+
+[difftool]
+	prompt = false
+
+[merge]
+	tool = vimdiff
+	conflictStyle = diff3
+
+[mergetool]
+	prompt = false
+
+[push]
+    followTags = true
+
+[pull]
+	rebase = false
+
+[branch]
+    sort = -authordate
+
+[color]
+    ui = auto
+
+[help]
+    autocorrect = 1
+
+[credential]
+    helper = cache --timeout=3600
+
+
+[alias]
+    ch = checkout
+    com = commit
+    br = branch
+    st = status
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    graph = log --graph --oneline --all --simplify-by-decoration
+    undo = reset --soft HEAD^
+    amend = commit --amend
+    unstage = reset HEAD --
+    last = log -1 HEAD
+
+
