@@ -31,3 +31,8 @@ simple but productive
 
 ![image](https://github.com/deep5050/dotfiles/assets/27947066/a13d805f-04cc-4d91-837d-ad215f10e823)
 
+# nvim
+1. `[space] t + h` to change theme
+2. `ctrl + n` for file explorer
+3. `[space] + ff` for find files
+4. on file explorer side `a` for add file, `r` for rename, `d` for delete, `m` for mark
