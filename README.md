@@ -3,48 +3,65 @@
   <img src=dotfiles.png height=300px width=500px align=center>
 </p>
 
-# dotfiles
+# Dotfiles: Custom Linux Configuration
 
-My custom configuration files for Linux.
+This repository contains my personalized configuration files for Linux. Each directory is tailored for different configs.
 
-Each branch has different styles for bash/fish/zsh configs
+## How to Apply
 
-# How to apply?
+Before applying the configurations, ensure you have GNU Stow installed.
 
-Install `gnu stow` first.
+Clone this repo into your home directory `~`
 
-1. `cd dotfiles`
+```bash
+cd dotfiles
+stow <package-name>
+```
 
-2. `stow <pacakage-name>`
+To override a package, deactivate the previous one using:
 
+```bash
+stow -D <old-package-name>
+```
 
-To override a package, defer the previous one with `stow -D <old-package-name>`
-and apply new one with `stow <new-pacakage-name>`
+Apply the new configuration with:
 
-This allows multiple configurations to exists under one place.
+```bash
+stow <new-package-name>
+```
 
-Default packages are listed uder `default-packages`
+This structure facilitates the coexistence of multiple configurations within a single directory.
 
-To get all the config you can simply run `make`
+## Default Packages
 
+The default packages are enumerated in the `default-packages` file.
 
+To apply all configurations, simply run:
 
-# Required tools
+```bash
+make
+```
 
-To use these confs. (see the install.sh file)
+## Required Tools
 
-1. bat
-2. fzf
-3. ripgrep
-4. zoxide
-5. lsd
-6. glow
-8. fuck
-9. tldr
+For seamless utilization of these configurations, refer to the `install.sh` file, which outlines the necessary tools:
 
-# Other useful tools
-11. [portal](https://github.com/SpatiumPortae/portal)
-12. [share-cli](https://github.com/marionebl/share-cli)
+- bat
+- fzf
+- ripgrep
+- zoxide
+- lsd
+- glow
+- thefuck
+- tldr
 
+## Other Useful Tools
+
+In addition to the essential tools, consider exploring these supplementary utilities:
+
+- portal
+- share-cli
+
+  -------------
 ![image](banner.png)
 
