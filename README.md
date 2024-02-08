@@ -46,22 +46,22 @@ make
 
 For seamless utilization of these configurations, refer to the `install.sh` file, which outlines the necessary tools:
 
-- bat
-- fzf
-- ripgrep
-- zoxide
-- lsd
-- glow
-- thefuck
-- tldr
+- [bat](https://github.com/sharkdp/bat)
+- [fzf](https://github.com/junegunn/fzf)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [lsd](https://github.com/lsd-rs/lsd)
+- [glow](https://github.com/charmbracelet/glow)
+- [thefuck](https://github.com/nvbn/thefuck)
+- [tldr](https://github.com/tldr-pages/tldr)
 
 ## Other Useful Tools
 
 In addition to the essential tools, consider exploring these supplementary utilities:
 
-- portal
-- share-cli
+- [portal](https://github.com/SpatiumPortae/portal/)
+- [share-cli](https://github.com/marionebl/share-cli)
 
-  -------------
+-------------
 ![image](banner.png)
 
