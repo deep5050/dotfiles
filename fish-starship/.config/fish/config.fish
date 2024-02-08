@@ -12,13 +12,12 @@ functions -e fish_right_prompt ;function fish_prompt --description 'Write out th
 
     set_color $fish_color_cwd
     #echo -n (prompt_pwd)
-    echo -n  "➡️" $PWD
+    echo -n $PWD
     set_color normal
-    echo -n " 🕖" (date +%H:%M:%S) " "
+
     # __terlar_git_prompt
     #fish_hg_prompt
-    echo 🌵(fish_git_prompt)
-
+    echo (fish_git_prompt)
 
     #if not test $last_status -eq 0
     #    set_color $fish_color_error
@@ -26,9 +25,7 @@ functions -e fish_right_prompt ;function fish_prompt --description 'Write out th
 
     #echo -n '➤ '
     #echo -n (fish_git_prompt) '><((°> '
-    #echo -n '><((°> '
-    # echo -n '🐟➡️'
-    echo -n "fish \$ "
+    echo -n '><((°> '
     #echo -n '><((°> fish_git_prompt
     set_color normal
 
@@ -134,4 +131,4 @@ alias update "sudo apt-get update & sudo apt-get upgrade"
 alias install "sudo apt-get install"
 # Display a random programming joke
 
-#starship init fish | source
+starship init fish | source

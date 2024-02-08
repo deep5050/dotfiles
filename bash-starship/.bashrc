@@ -264,5 +264,5 @@ gist() {
   bash ~/scripts/upload_gist.sh $1 $2
 
 }
-echo "Hi, $(whoami)! welcome :)";
-
+#echo "Hi, $(whoami)! welcome :)";
+eval "$(starship init bash)"

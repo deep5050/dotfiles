@@ -1,11 +1,37 @@
+
+<p align=center>
+  <img src=dotfiles.png height=300px width=500px align=center>
+</p>
+
 # dotfiles
-My custom configuration files for Linux
-> TIP: use GNU stow to manage your configs
 
-simple but productive
+My custom configuration files for Linux.
+
+Each branch has different styles for bash/fish/zsh configs
+
+# How to apply?
+
+Install `gnu stow` first.
+
+1. `cd dotfiles`
+
+2. `stow <pacakage-name>`
 
 
-# Required tools to use these confs. (see the install.sh file)
+To override a package, defer the previous one with `stow -D <old-package-name>`
+and apply new one with `stow <new-pacakage-name>`
+
+This allows multiple configurations to exists under one place.
+
+Default packages are listed uder `default-packages`
+
+To get all the config you can simply run `make`
+
+
+
+# Required tools
+
+To use these confs. (see the install.sh file)
 
 1. bat
 2. fzf
@@ -13,7 +39,6 @@ simple but productive
 4. zoxide
 5. lsd
 6. glow
-7. [has](https://raw.githubusercontent.com/kdabir/has/master/has)
 8. fuck
 9. tldr
 
@@ -21,18 +46,5 @@ simple but productive
 11. [portal](https://github.com/SpatiumPortae/portal)
 12. [share-cli](https://github.com/marionebl/share-cli)
 
-# Bash
+![image](banner.png)
 
-![image](https://github.com/deep5050/dotfiles/assets/27947066/411b18fc-922d-4d7f-a7a2-2aab0d1902f2)
-
-
-
-# Fish
-
-![image](https://github.com/deep5050/dotfiles/assets/27947066/a13d805f-04cc-4d91-837d-ad215f10e823)
-
-# nvim
-1. `[space] t + h` to change theme
-2. `ctrl + n` for file explorer
-3. `[space] + ff` for find files
-4. on file explorer side `a` for add file, `r` for rename, `d` for delete, `m` for mark

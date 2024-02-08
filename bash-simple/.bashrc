@@ -60,9 +60,8 @@ if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     # --------------------- below one
     #PS1='\W $(__git_ps1 "(\[\e[35m\]%s\[\e[m\])") $ '
-    #PS1='\W\[\e[32m\] \$ \[\e[m\]'
-    PS1='\[\e[38;5;33m\]\u\[\e[38;5;208m\] 📂 \w\[\e[38;5;214m\]\[\e[38;5;15m\] $(__git_ps1 "🌿(\[\e[35m\]%s\[\e[m\])") \[\e[38;5;39m\]\[\e[38;5;15m\]🕒$(date +%H:%M:%S) \n\[\e[38;5;39m\]⮞ $ \[\e[38;5;15m\]'
- #PS1='\W \$ '
+    PS1='\W\[\e[32m\] \$ \[\e[m\]'
+    #PS1='\W \$ '
     #PS1='\[\e[36m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]:\[\e[33;1m\]\w\[\e[m\]$(__git_ps1 " (\[\e[35m\]%s\[\e[m\])")\$ '
     #PS1='\[\e[32m\]\u\[\e[0m\]@\[\e[97m\]\W > '
     #PS1='\[\e[32m\]\u\[\e[0m\]@\[\e[33m\]\W\[\e[0m\] > '
@@ -182,7 +181,7 @@ alias "..."="z ./../../../"
 alias vi=nvim
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
-alias tree="tree --gitignore"
+#alias tree="lsd --tree -a"
 
 
 # Function to create a backup of a file
