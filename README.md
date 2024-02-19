@@ -62,6 +62,8 @@ In addition to the essential tools, consider exploring these supplementary utili
 - [portal](https://github.com/SpatiumPortae/portal/)
 - [share-cli](https://github.com/marionebl/share-cli)
 
--------------
-![image](banner.png)
+-----------------
+
+![image](https://github.com/deep5050/dotfiles/assets/27947066/c78f87b0-a001-402f-97ca-028f6681498b)
+
 
