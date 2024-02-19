@@ -1,4 +1,7 @@
+git_ps1
 bash
+bash-aliases
+shell-scripts
 vim
 nvim
 editorconfig
