@@ -1,0 +1,95 @@
+" Disable compatibility with vi which can cause unexpected issues.
+set nocompatible
+
+" Enable type file detection. Vim will be able to try to detect the type of file is use.
+filetype on
+
+" Turn syntax highlighting on.
+syntax on
+
+set number
+colorscheme morning
+
+set cursorline
+
+"set cursorcolumn
+set shiftwidth=4
+
+set tabstop=4
+
+set incsearch
+" Ignore capital letters during search.
+
+set ignorecase
+" Override the ignorecase option if searching for capital letters.
+" This will allow you to search specifically for capital letters.
+
+set smartcase
+" Show matching words during a search.
+
+set showmatch
+" Use highlighting when doing a search.
+
+set hlsearch
+
+" Set the commands to save in history default number is 20.
+set history=1000
+
+" Enable auto completion menu after pressing TAB.
+set wildmenu
+
+" Make wildmenu behave like similar to Bash completion.
+set wildmode=list:longest
+
+" There are certain files that we would never want to edit with Vim.
+" Wildmenu will ignore files with these extensions.
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+
+" Customize colors
+highlight StatusLine ctermfg=black ctermbg=green
+highlight StatusLineNC ctermfg=white ctermbg=darkgrey
+
+" Set separator between items
+let &statusline .= ' %<%=[%{&ff}/%m%R%Y%{strlen(&ft)?&ft:"none"}] %= %l/%L:%c %{&wrap?"W":""}[%P] [%{&fileformat}]'
+
+" Customize visual appearance of the status bar
+set fillchars+=stl:\ ,stlnc:\
+
+" Add space before and after status bar
+"set statusline+=%{repeat(' ',&columns-col('.')-len(&fenc))}
+
+" Set status bar options
+set laststatus=2         " Always show status bar
+set statusline=%<          " Truncate if the status line is too long
+set statusline=%f\         " Filename
+set statusline+=%m          " Modified flag
+set statusline+=\ %y       " Filetype
+set statusline+=\ %{&ff}   " File format (unix, dos, mac)
+set statusline+=\ [%{&encoding}]   " File encoding
+set statusline+=\ [%{strlen(&ft)?&ft:'none'}]   " File type
+set statusline+=\ %r       " Readonly flag
+set statusline+=\ %=%l/%L:%c  " Line number/Total lines:Column number
+set statusline+=\ %P        " Percentage through file
+set statusline+=\ %w        " Wrap flag
+set statusline+=\ %t        " File format (unix, dos, mac)
+set statusline+=\ %b        " Buffer number
+
+
+" This will enable code folding.
+" Use the marker method of folding.
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+" More Vimscripts code goes here.
+
+" }}}
+" zo to open a single fold under the cursor.
+
+"zc to close the fold under the cursor.
+
+"zR to open all folds.
+
+"zM to close all folds.
