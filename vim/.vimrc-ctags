@@ -8,7 +8,7 @@ filetype on
 syntax on
 
 set number
-colorscheme morning
+colorscheme ron
 
 set cursorline
 
@@ -75,7 +75,17 @@ set statusline+=\ %w        " Wrap flag
 set statusline+=\ %t        " File format (unix, dos, mac)
 set statusline+=\ %b        " Buffer number
 
-
+"ctags and cscope
+" enter command: cs add <database>
+" create cscope with cscope -Rb
+" create ctags with ctags -R
+cs add cscope.out
+set cscopeprg=/usr/bin/cscope
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+set cscopetag
+set csto=0
+set tags=./tags,tags;$HOME
+set tags+=./tags
 " This will enable code folding.
 " Use the marker method of folding.
 augroup filetype_vim
